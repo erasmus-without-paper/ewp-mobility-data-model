@@ -25,21 +25,26 @@ The notation is as follows:
  * Entity and attribute names are sometimes abbreviated for diagram clarity.
 
  * Primary keys (identifiers) can consist of more than one attribute, are
-   __underscored__, denoted by PK and positioned above the entity line.
+   underscored, denoted by PK and positioned above the entity line.
 
- * Mandatory attributes are in **boldface**.
+ * Mandatory attributes are in boldface.
 
  * Relationships are usually 1:many, where the "many" end is denoted by
    a circle and "crow's feet", denoting "0 or more". The connected entities are
    called "owner" and "member" respectively. The relationship is implemented by
-   **foreign key** attributes (denoted by FK) in the member entity.
+   foreign key attributes (denoted by FK) in the member entity.
 
  * Relationships can be identifying or non-identifying. If a relationship is
    identifying, it means the connection from member (in the "many" end) to
    owner **partly identifies** the member. Identifying relationships have a
    solid line, non-identifying relationships are dashed. NOTE: This may
    sometimes be deviated from if the number of foreign key attributes
-   otherwise would become too large to produce a clear diagram.
+   otherwise would become too large to produce a clear diagram. In that case
+   - a placeholder is used for the primary key,
+   - the actual primary key is denoted by (PK) and
+   - any incoming relationships that should be identifying (and therefore solid)
+     are thicker than normal (but still dashed, since the tool sees them as
+     non-identifying).
 
  * Non-identifying relationships can be mandatory or optional. Mandatory
    relationships have two crossbars (|-|) at the owner end, denoting "minimum
