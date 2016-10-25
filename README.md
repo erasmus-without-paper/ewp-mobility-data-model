@@ -16,6 +16,9 @@ structure the APIs expose.
 Notation
 --------
 
+ * The word "attribute" in this context is used as a "piece of information
+   in an entity", **not** an XML attribute.
+
  * Entity and attribute names are in Initcaps With Spaces (e.g. Cooperation
    Condition and Mobility Type). This translates to lowercase-with-hyphens in
    the XSDs (e.g. cooperation-condition and mobility-type).
@@ -57,7 +60,10 @@ Special entitities
 ------------------
 Inst/Org Unit models both Institution and Department: It has a recursive
 relationship, implementing a hierarchy where the top level is the institution
-itself.
+itself. Most of its attributes marked as mandatory - except for Name (English)
+and possibly Other Id (Erasmus)? - are only mandatory for the Institution level.
+For these attributes, Departments have default values = those of the Institution
+they belong to.
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
