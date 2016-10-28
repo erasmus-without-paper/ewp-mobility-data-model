@@ -51,19 +51,29 @@ Notation
    denoting "minimum 0, maximum 1".
 
  * Recursive relationships (from an entity to itself) implement a **hierarchy**.
-   Relationships referencing this entity can point to any level in the
+   Other relationships referencing this entity can point to any level in the
    hierarchy. Exceptions are explicitly stated on the relationship in
    parentheses - e.g. "(always institution)".
+
+ * Many:many relationships are implemented as a separate entity connecting the
+   two entities in question, via identifying relationships: If entity A has a
+   many:many relationship to entity B, it's realized by an intermediate entity
+   AB, with up to a x b occurrences (where a and b are the number of occurrences
+   in A and B, respectively). Such relationships are sometimes represented in an
+   abbreviated form for diagram clarity: Instead of an extra entity and two
+   relationships, the relationship is represented by a line with "crow's feet"
+   at each end, and the name of the intermediate entity on the line itself.
+   (Note: This is only done when the extra entity doesn't contain any significant
+   information itself.)
 
 
 Special entitities
 ------------------
 Inst/Org Unit models both Institution and Department: It has a recursive
 relationship, implementing a hierarchy where the top level is the institution
-itself. Most of its attributes marked as mandatory - except for Name (English)
-and possibly Other Id (Erasmus)? - are only mandatory for the Institution level.
-For these attributes, Departments have default values = those of the Institution
-they belong to.
+itself. Some attributes marked as mandatory may only be mandatory for the
+Institution level. For these attributes, Departments will have default values
+= those of the Institution they belong to.
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
