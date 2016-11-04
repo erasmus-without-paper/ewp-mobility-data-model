@@ -27,6 +27,10 @@ Notation
    Attributes that naturally belong in pairs are often abbreviated to a single
    attribute with a slash (e.g. Start/End Date = Start Date + End Date).
 
+ * Some attributes have an asterisk and an identifier in parentheses. This
+   means that the corresponding XML element can be repeated with an **XML**
+   attribute. E.g. "Name* (Lang)" means N names in different languages.
+
  * Primary keys (identifiers) can consist of more than one attribute, are
    underscored, denoted by PK and positioned above the entity line.
 
