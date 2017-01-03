@@ -75,13 +75,18 @@ Notation
    information itself.)
 
 
-Special entitities
-------------------
-Inst/Org Unit models both Institution and Department: It has a recursive
-relationship, implementing a hierarchy where the top level is the institution
-itself. Some attributes marked as mandatory may only be mandatory for the
-Institution level. For these attributes, Departments will have default values
-= those of the Institution they belong to.
+Special entities
+----------------
+ * Inst/Org Unit models both Institution and Department: It has a recursive
+   relationship, implementing a hierarchy where the top level is the institution
+   itself. Some attributes marked as mandatory may only be mandatory for the
+   Institution level. For these attributes, Departments will have default values
+   = those of the Institution they belong to.
+
+ * IIA models an abstract global Inter-Institutional Agreement, but this doesn't
+   exist: In reality, IIAs are local to each HEI, and it's up to the HEIs to
+   match relevant local HEIs and make sure they describe the same agreement
+   (see https://github.com/erasmus-without-paper/ewp-specs-api-iias).
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
