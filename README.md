@@ -102,7 +102,8 @@ Special entities
    contact info (email address, URL, address, phone etc) and/or a name/label
    and/or a description. It may be connected to a Person (denoting contact info
    for that person), an Academic Term or just an Inst/Org Unit (denoting fact
-   sheet info).
+   sheet info). HEIs are **not** expected to implement this generalized
+   structure.
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
