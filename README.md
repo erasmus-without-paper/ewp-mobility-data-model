@@ -46,7 +46,17 @@ Notation
    foreign key attributes (denoted by FK) in the member entity. Some
    relationships have labels, usually specifying a **role** (if there are more
    than one relationship between the entities in question and/or it's not
-   self-evident what the relationship "means").
+   self-evident what the relationship "means"). NOTE: The diagram tool keeps
+   relationships and associated FK attributes in sync, which sometimes can lead
+   to unnecessary constraints or clutter in the diagram (such as a large number
+   of FK attributes, or unwanted optionality). In those cases, the relationship
+   is disconnected from the associated FK attributes (i.e. the FK mark is
+   removed) or the FK attributes are removed completely.
+
+ * Only **natural** keys are represented (which are often composite). If a SIS
+   uses surrogate keys or UUIDs, these are not present in the model, but the
+   natural key constraints are still expected to hold (typically as alternate
+   keys).
 
  * Relationships can be identifying or non-identifying. If a relationship is
    identifying, it means the connection from member (in the "many" end) to
@@ -77,16 +87,22 @@ Notation
 
 Special entities
 ----------------
- * Inst/Org Unit models both Institution and Department: It has a recursive
+ * **Inst/Org Unit** models both Institution and Department: It has a recursive
    relationship, implementing a hierarchy where the top level is the institution
    itself. Some attributes marked as mandatory may only be mandatory for the
    Institution level. For these attributes, Departments will have default values
    = those of the Institution they belong to.
 
- * IIA models an abstract global Inter-Institutional Agreement, but this doesn't
-   exist: In reality, IIAs are local to each HEI, and it's up to the HEIs to
-   match relevant local HEIs and make sure they describe the same agreement
-   (see https://github.com/erasmus-without-paper/ewp-specs-api-iias).
+ * **IIA** models an abstract global Inter-Institutional Agreement, but this
+   doesn't exist: In reality, IIAs are local to each HEI, and it's up to the
+   HEIs to match relevant local HEIs and make sure they describe the same
+   agreement (see https://github.com/erasmus-without-paper/ewp-specs-api-iias).
+
+ * **Contact/Fact Sheet** is a generalized "information" entity containing
+   contact info (email address, URL, address, phone etc) and/or a name/label
+   and/or a description. It may be connected to a Person (denoting contact info
+   for that person), an Academic Term or just an Inst/Org Unit (denoting fact
+   sheet info).
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
