@@ -31,9 +31,8 @@ Notation
    optional asterisk. This means that the XML element corresponding to the main
    identifier has **XML** attribute(s) = the parenthesized identifier(s).
    If there is an asterisk present, the element can be repeated for different
-   values of the XML attribute. E.g. "Duration (Var,Unit)" means a single
-   duration with a variant and a unit, while "Name* (Lang)" means N names in
-   different languages.
+   values of the XML attribute. E.g. "Name* (Lang)" means N names in different
+   languages.
 
  * Primary keys (identifiers) can consist of more than one attribute, are
    underscored, denoted by PK and positioned above the entity line.
@@ -49,19 +48,22 @@ Notation
    self-evident what the relationship "means"). NOTE: The diagram tool keeps
    relationships and associated FK attributes in sync, which sometimes can lead
    to unnecessary constraints or clutter in the diagram (such as a large number
-   of FK attributes, or unwanted optionality). In those cases, the relationship
-   is disconnected from the associated FK attributes (i.e. the FK mark is
-   removed) or the FK attributes are removed completely.
+   of FK attributes, or unwanted optionality). In those cases, the FK mark on
+   the attributes (or the FK attributes themselves) is/are removed.
 
- * Only **natural** keys are represented (which are often composite). If a SIS
-   uses surrogate keys or UUIDs, these are not present in the model, but the
-   natural key constraints are still expected to hold (typically as alternate
-   keys).
+ * Usually, primary keys are **natural** (and often composite). But in some
+   cases, surrogate keys or UUIDs are used. In those cases, natural key
+   constraints are are also represented, as alternate keys (marked "(AK)").
 
  * Relationships can be identifying or non-identifying. If a relationship is
    identifying, it means the connection from member (in the "many" end) to
    owner **partly identifies** the member. Identifying relationships have a
-   solid line, non-identifying relationships are dashed.
+   solid line, non-identifying relationships are dashed. NOTE: When surrogate
+   primary keys are used, the diagram loses any "identifying" information about
+   incoming relationships (i.e. the relationships will always be marked as
+   non-identifying, since the alternate keys aren't part of the primary key).
+   In these cases, the notation is "fudged" by drawing the (non-identifying)
+   relationships in **bold**, to indicate that they are "really" identifying.
 
  * Non-identifying relationships can be mandatory or optional. Mandatory
    relationships have two crossbars (|-|) at the owner end, denoting "minimum
