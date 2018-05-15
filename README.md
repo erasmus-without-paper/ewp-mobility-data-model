@@ -1,3 +1,10 @@
+WARNING - Data Model is currently deprecated
+============================================
+
+Data Model was used to create initial version of the APIs. The most 
+recent API versions may not be fully coherent with the Data Model. Also 
+the Data Model is not fully covered by the current set of APIs.
+
 WP3 Data Model
 ==============
 
