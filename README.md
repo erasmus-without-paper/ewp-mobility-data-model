@@ -1,9 +1,11 @@
-WARNING - Data Model is currently deprecated
-============================================
+Data Model is up to date (with one exception)
+=============================================
 
-Data Model was used to create initial version of the APIs. The most 
-recent API versions may not be fully coherent with the Data Model. Also 
-the Data Model is not fully covered by the current set of APIs.
+The data model has been updated with respect to the current XML schemas,
+with one exception: The Learning Agreement Component change/snapshot
+structures have never been part of the model, and still aren't. The
+Learning Agreement and LA Component entities have been stripped of all
+attributes, as these were suggestions not reflected in the XML schemas.
 
 WP3 Data Model
 ==============
