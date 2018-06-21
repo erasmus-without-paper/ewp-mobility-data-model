@@ -111,10 +111,14 @@ Special entities
 
  * **Contact/Fact Sheet** is a generalized "information" entity containing
    contact info (email address, URL, address, phone etc) and/or a name/label
-   and/or a description. It may be connected to a Person (denoting contact info
-   for that person), an Academic Term or just an Inst/Org Unit (denoting fact
-   sheet info). HEIs are **not** expected to implement this generalized
-   structure.
+   and/or a description. The abstract Role attribute represents the different
+   "roles" this information may play in connection with other entities, e.g.
+   an Institution can have a Street Address, a Mailing Address, a Logo URL and
+   sets of Website URLs, Mobility Fact Sheet URLs and Contacts - all of which
+   are modelled by the same abstract entity. It may be connected to a Person
+   (denoting contact info for that person), an Academic Term, an Inst/Org Unit
+   (denoting fact sheet info), a set of IIA Partners or Mobility Specs. HEIs
+   are **not** expected to implement this generalized structure.
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
