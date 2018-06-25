@@ -2,10 +2,8 @@ Data Model is up to date (with one exception)
 =============================================
 
 The data model has been updated with respect to the current XML schemas,
-with one exception: The Learning Agreement Component change/snapshot
-structures have never been part of the model, and still aren't. The
-Learning Agreement and LA Component entities have been stripped of all
-attributes, as these were suggestions not reflected in the XML schemas.
+with one exception: The (Learning Agreement) Component change structure
+has never been part of the model, and still isn't.
 
 WP3 Data Model
 ==============
