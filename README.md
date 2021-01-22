@@ -5,7 +5,7 @@ The data model has been updated with respect to the current XML schemas,
 with one exception: The (Learning Agreement) Component change structure
 has never been part of the model, and still isn't.
 
-WP3 Data Model
+Data Model
 ==============
 
 * [What is the status of this document?][statuses]
