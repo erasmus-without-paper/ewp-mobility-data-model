@@ -1,9 +1,7 @@
 Data Model is up to date (with one exception)
 =============================================
 
-The data model has been updated with respect to the current XML schemas,
-with one exception: The (Learning Agreement) Component change structure
-has never been part of the model, and still isn't.
+The data model has been updated with respect to the current XML schemas.
 
 Data Model
 ==============
@@ -17,8 +15,9 @@ Summary
 
 This document describes the **data model**. This is basically a PDF document 
 in E-R (Entity-Relationship) notation, describing the underlying information
-structure the APIs expose.
-
+structure the APIs expose. The data model is a conceptual description across
+XML schemas, not an accurate depiction of each schema (which only exposes a
+partial truth).
 
 Notation
 --------
@@ -88,7 +87,7 @@ Notation
    AB, with up to a x b occurrences (where a and b are the number of occurrences
    in A and B, respectively). Such relationships are sometimes represented in an
    abbreviated form for diagram clarity: Instead of an extra entity and two
-   relationships, the relationship is represented by a line with "crow's feet"
+   relationships, the relationship is represented by a line with black circles
    at each end, and the name of the intermediate entity on the line itself.
    (Note: This is only done when the extra entity doesn't contain any significant
    information itself.)
