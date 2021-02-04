@@ -19,21 +19,18 @@ XML schemas, not an accurate depiction of each schema (which only exposes a
 partial truth).
 
 Changes since June 2018
-=======================
+-----------------------
 
 General
--------
 * The many:many relationship notation has been changed from "crow’s feet"
   to a black circle at each end, to make the diagram more compact
 * Foreign keys that are the result of the modeling tool (rather than
   reflecting the schemas) are removed (e.g. sign Role/Person in IIA Partner)
 
 IIA
----
 * A PDF attribute has been added
 
 Mobility Spec
--------------
 * All attributes are now optional
 * Avg Months/Days has been renamed to Tot Months/Days
 * Added attribute Blended
@@ -41,15 +38,12 @@ Mobility Spec
 * Many:many relationships Send/Recv OU have been added
 
 Contact/Fact Sheet
-------------------
 * Foreign key AT Start/End Date has been removed
 
 Person
-------
 * Position has been removed and Global ID added
 
 Mobility
---------
 * Entity has been renamed to Mobility/Learning Agreement
 * IIA reference is now mandatory
 * Send/Recv HEI/OUnit have been renamed to Send/Recv Partner, corresponding
@@ -58,7 +52,6 @@ Mobility
 * Added attribute URL* (Outc,Prov)
 
 Snapshot
---------
 * Entity has been renamed to LA Version
 * Snapshot Type has been renamed to Version and the list of values has been
   changed
@@ -66,7 +59,6 @@ Snapshot
   replaced by Stnt Approv Sign, Send Approv Sign and Recv Approv Sign
 
 Component
----------
 * Added attribute Recog Cond
 * Expanded list of Component Types
 
