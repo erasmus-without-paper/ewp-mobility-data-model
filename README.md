@@ -1,5 +1,5 @@
-Data Model is up to date (with one exception)
-=============================================
+Data Model is up to date
+========================
 
 The data model has been updated with respect to the current XML schemas.
 
