@@ -4,11 +4,10 @@ Data Model is up to date
 The data model has been updated with respect to the current XML schemas.
 
 Data Model
-==============
+==========
 
 * [What is the status of this document?][statuses]
 * [See the index of all other EWP Specifications][develhub]
-
 
 Summary
 -------
@@ -18,6 +17,58 @@ in E-R (Entity-Relationship) notation, describing the underlying information
 structure the APIs expose. The data model is a conceptual description across
 XML schemas, not an accurate depiction of each schema (which only exposes a
 partial truth).
+
+Changes since June 2018
+=======================
+
+General
+-------
+* The many:many relationship notation has been changed from "crow’s feet"
+  to a black circle at each end, to make the diagram more compact
+* Foreign keys that are the result of the modeling tool (rather than
+  reflecting the schemas) are removed (e.g. sign Role/Person in IIA Partner)
+
+IIA
+---
+* A PDF attribute has been added
+
+Mobility Spec
+-------------
+* All attributes are now optional
+* Avg Months/Days has been renamed to Tot Months/Days
+* Added attribute Blended
+* ISCED Code has been renamed to Subj Area/ISCED and been marked with a '*'
+* Many:many relationships Send/Recv OU have been added
+
+Contact/Fact Sheet
+------------------
+* Foreign key AT Start/End Date has been removed
+
+Person
+------
+* Position has been removed and Global ID added
+
+Mobility
+--------
+* Entity has been renamed to Mobility/Learning Agreement
+* IIA reference is now mandatory
+* Send/Recv HEI/OUnit have been renamed to Send/Recv Partner, corresponding
+  to the relationships to IIA Partner
+* Relationships directly to Institution/Organization Unit have been removed
+* Added attribute URL* (Outc,Prov)
+
+Snapshot
+--------
+* Entity has been renamed to LA Version
+* Snapshot Type has been renamed to Version and the list of values has been
+  changed
+* Attributes In Effect since, Approval* and Shd Be Appr By* have been
+  replaced by Stnt Approv Sign, Send Approv Sign and Recv Approv Sign
+
+Component
+---------
+* Added attribute Recog Cond
+* Expanded list of Component Types
 
 Notation
 --------
